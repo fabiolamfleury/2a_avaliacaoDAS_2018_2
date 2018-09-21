@@ -12,13 +12,14 @@ class CalculoRendimentoLiquidoTeste {
 	void testCalculoRendimentoLiquido() {
 		AplicacaoCDB aplicacao = new AplicacaoCDB(60, 1000.00F, 8.5F);
 		
-		assertEquals(1.0829F, aplicacao.getRendimentoLiquido());
+		assertEquals(1.0829F, aplicacao.getRendimentoLiquido(), 0.01F);
 	}
 
 	@Test
 	void testOutroCalculoRendimentoLiquido() {
 		AplicacaoCDB aplicacao = new AplicacaoCDB(120, 500, 8);
 		
-		assertEquals(2.0384F, aplicacao.getRendimentoLiquido());
+		assertEquals(2.0384F, aplicacao.getRendimentoLiquido(), 0.01F);
 	}
+
 }
